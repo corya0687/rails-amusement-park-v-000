@@ -1,0 +1,12 @@
+<%=@attraction.name%>
+<%=@attraction.nausea_rating%>
+<%=@attraction.happiness_rating%>
+<%=@attraction.tickets%>
+<%=@attraction.min_height%>
+
+
+<%if !current_user.admin%>
+  <%= button_to 'Go on this ride', attraction_path(@attraction), method: "patch"%>
+  <%else%>
+  <%= link_to 'Edit Attraction', edit_attraction_path(@attraction)%>
+<%end%>

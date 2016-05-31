@@ -13,6 +13,7 @@ RSpec.describe User, :type => :model do
   }
 
   let(:admin) {
+
     User.create(
       :name => "Walt",
       :password => "password",
